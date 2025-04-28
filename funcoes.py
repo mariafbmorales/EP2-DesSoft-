@@ -97,3 +97,20 @@ def calcula_pontos_quadra(numeros):
             soma += numeros[i]
         return soma
     return 0
+
+def calcula_pontos_quina(numeros):
+    repeticoes = {}
+    for i in range(len(numeros)):
+        if numeros[i] in repeticoes:
+            repeticoes[numeros[i]] += 1
+        if numeros[i] not in repeticoes:
+            repeticoes[numeros[i]] = 1
+
+    quinteto = 0
+    for valor in repeticoes.values():
+        if valor >= 5:
+            quinteto += 1
+    
+    if quinteto >= 1:
+        return 50
+    return 0
