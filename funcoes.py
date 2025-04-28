@@ -126,10 +126,10 @@ def calcula_pontos_regra_avancada(lista):
     return funcoes
 
 def faz_jogada(lista, categoria, cartela_pontos):
-    for numero in cartela_pontos['regra simples']: #regra simples ou regra avançada
+    for numero in cartela_pontos['regra_simples']: #regra simples ou regra avançada
         if numero == categoria:
-            cartela_pontos['regra simples'][categoria] = calcula_pontos_regra_simples(lista) 
-    for palavra in cartela_pontos['regra avançada']:
+            cartela_pontos['regra_simples'][categoria] = calcula_pontos_regra_simples(lista) 
+    for palavra in cartela_pontos['regra_avancada']:
         if palavra == categoria:
-            cartela_pontos['regra avançada'][categoria] = calcula_pontos_regra_avancada(lista)
+            cartela_pontos['regra_avancada'][categoria] = calcula_pontos_regra_avancada(lista)
     return cartela_pontos
