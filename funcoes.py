@@ -124,3 +124,12 @@ def calcula_pontos_regra_avancada(lista):
     funcoes['sequencia_alta'] = calcula_pontos_sequencia_alta(lista)
     funcoes['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista)
     return funcoes
+
+def faz_jogada(lista, categoria, cartela_pontos):
+    for numero in cartela_pontos['regra simples']: #regra simples ou regra avançada
+        if numero == categoria:
+            cartela_pontos['regra simples'][categoria] = calcula_pontos_regra_simples(lista) 
+    for palavra in cartela_pontos['regra avançada']:
+        if palavra == categoria:
+            cartela_pontos['regra avançada'][categoria] = calcula_pontos_regra_avancada(lista)
+    return cartela_pontos
