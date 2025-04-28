@@ -41,7 +41,7 @@ def calcula_pontos_sequencia_baixa(numero):
         if numero[i] not in sequencia:
             sequencia.append(numero[i])
     for num in sequencia:
-        if (num + 1) and (num + 2) and (num+3) in sequencia:
+        if (num + 1) in sequencia and (num + 2) in sequencia and (num+3) in sequencia:
             return 15
         else:
             return 0
