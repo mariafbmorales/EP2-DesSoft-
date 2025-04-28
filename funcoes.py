@@ -88,7 +88,7 @@ def calcula_pontos_quadra(numeros):
 
     quarteto = 0
     for valor in repeticoes.values():
-        if valor == 4:
+        if valor >= 4:
             quarteto += 1
     
     if quarteto >= 1:
