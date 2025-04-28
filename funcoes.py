@@ -127,7 +127,8 @@ def calcula_pontos_regra_avancada(lista):
 
 def faz_jogada(lista, categoria, cartela_pontos):
     if categoria in ['1', '2', '3', '4', '5', '6']:
-        cartela_pontos['regra_simples'][categoria] = calcula_pontos_regra_simples(lista) 
+        categoria_inteiro = int(categoria)
+        cartela_pontos['regra_simples'][categoria_inteiro] = calcula_pontos_regra_simples(lista) 
     elif categoria in cartela_pontos['regra_avancada']:
         cartela_pontos['regra_avancada'][categoria] = calcula_pontos_regra_avancada(lista)
     return cartela_pontos
