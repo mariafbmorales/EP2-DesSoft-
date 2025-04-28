@@ -23,7 +23,7 @@ def remover_dado(dados_rolados, dados_estoque, indice):
     return [dados_rolados, nova_lista_estoque]
 
 def calcula_pontos_regra_simples(numeros_inteiros):
-    dicio = {}
+    dicio = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
     for num in numeros_inteiros:
         if num in dicio:
             dicio[num] += num
