@@ -65,6 +65,6 @@ def calcula_pontos_full_house(numeros):
     for n in repeticoes:
         soma = 0
         if repeticoes[n] == 3 or repeticoes[n] == 2:
-            soma += repeticoes[n]
+            soma += n
         return soma
     return 0
