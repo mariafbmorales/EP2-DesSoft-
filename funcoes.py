@@ -77,3 +77,23 @@ def calcula_pontos_full_house(numeros):
             soma += numeros[i]
         return soma
     return 0
+
+def calcula_pontos_quadra(numeros):
+    repeticoes = {}
+    for i in range(len(numeros)):
+        if numeros[i] in repeticoes:
+            repeticoes[numeros[i]] += 1
+        if numeros[i] not in repeticoes:
+            repeticoes[numeros[i]] = 1
+
+    quarteto = 0
+    for valor in repeticoes.values():
+        if valor == 4:
+            quarteto += 1
+    
+    if quarteto == 1:
+        soma = 0
+        for i in range(len(numeros)):
+            soma += numeros[i]
+        return soma
+    return 0
