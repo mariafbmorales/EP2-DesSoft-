@@ -27,7 +27,5 @@ def calcula_pontos_regra_simples(numeros_inteiros):
     for num in numeros_inteiros:
         if num in dicio:
             dicio[num] += num
-        else:
-            dicio[num] = num
     return dicio
             
