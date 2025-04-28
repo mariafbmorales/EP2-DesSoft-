@@ -43,7 +43,7 @@ def calcula_pontos_sequencia_baixa(numero):
         soma = 0
         for num in sequencia:
             soma += num
-            if soma == 10 or soma == 14 or soma == 18:
-                return 15
-            else:
-                return 0
+        if soma == 10 or soma == 14 or soma == 18:
+            return 15
+        else:
+            return 0
