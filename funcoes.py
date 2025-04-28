@@ -40,10 +40,8 @@ def calcula_pontos_sequencia_baixa(numero):
     for i in range(len(numero)):
         if numero[i] not in sequencia:
             sequencia.append(numero[i])
-        soma = 0
-        for num in sequencia:
-            soma += num
-        if soma == 10 or soma == 14 or soma == 18:
+    for num in sequencia:
+        if (num + 1) and (num + 2) and (num+3) in sequencia:
             return 15
         else:
             return 0
