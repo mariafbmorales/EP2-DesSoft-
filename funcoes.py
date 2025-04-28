@@ -44,3 +44,13 @@ def calcula_pontos_sequencia_baixa(numero):
         if i in sequencia and i+1 in sequencia and i+2 in sequencia and i+3 in sequencia:
             return 15
     return 0
+
+def calcula_pontos_sequencia_alta(numero):
+    sequencia = []
+    for i in range(len(numero)):
+        if numero[i] not in sequencia:
+            sequencia.append(numero[i])
+    for i in range(1,5):
+        if i in sequencia and i+1 in sequencia and i+2 in sequencia and i+3 in sequencia and i+4 in sequencia:
+            return 30
+    return 0
