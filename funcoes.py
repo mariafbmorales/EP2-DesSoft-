@@ -114,3 +114,13 @@ def calcula_pontos_quina(numeros):
     if quinteto >= 1:
         return 50
     return 0
+
+def calcula_pontos_regra_avancada(lista):
+    funcoes = {'cinco_iguais': 0,'full_house': 0,'quadra': 0,'sem_combinacao': 0,'sequencia_alta': 0,'sequencia_baixa': 0}
+    funcoes['cinco_iguais'] = calcula_pontos_quina(lista)
+    funcoes['full_house'] = calcula_pontos_full_house(lista)
+    funcoes['quadra'] = calcula_pontos_quadra(lista)
+    funcoes['sem_combinacao'] = calcula_pontos_soma(lista)
+    funcoes['sequencia_alta'] = calcula_pontos_sequencia_alta(lista)
+    funcoes['sequencia_baixa'] = calcula_pontos_sequencia_baixa(lista)
+    return funcoes
