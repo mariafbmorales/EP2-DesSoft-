@@ -130,6 +130,6 @@ def faz_jogada(lista, categoria, cartela_pontos):
         pontos = calcula_pontos_regra_simples(lista, int(categoria))
         cartela_pontos['regra_simples'][int(categoria)] = pontos
     else:
-        pontos = calcula_pontos_regra_avancada(lista, categoria)
+        pontos = calcula_pontos_regra_avancada(lista)
         cartela_pontos['regra_avancada'][categoria] = pontos
     return cartela_pontos
