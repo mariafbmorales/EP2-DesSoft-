@@ -54,3 +54,17 @@ def calcula_pontos_sequencia_alta(numero):
         if i in sequencia and i+1 in sequencia and i+2 in sequencia and i+3 in sequencia and i+4 in sequencia:
             return 30
     return 0
+
+def calcula_pontos_full_house(numeros):
+    repeticoes = {}
+    for i in range(len(numeros)):
+        if numeros[i] in repeticoes:
+            repeticoes[numeros[i]] += 1
+        if numeros[i] not in repeticoes:
+            repeticoes[numeros[i]] = 1
+    for n in repeticoes:
+        soma = 0
+        if repeticoes[n] == 3 or repeticoes[n] == 2:
+            soma += repeticoes[n]
+        return soma
+    return 0
