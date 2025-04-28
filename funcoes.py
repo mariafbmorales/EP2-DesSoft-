@@ -28,4 +28,9 @@ def calcula_pontos_regra_simples(numeros_inteiros):
         if num in dicio:
             dicio[num] += num
     return dicio
-            
+
+def calcula_pontos_soma(numeros):
+    soma = 0
+    for i in range(len(numeros)):
+        soma += numeros[i]
+    return soma
