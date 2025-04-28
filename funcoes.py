@@ -21,3 +21,13 @@ def remover_dado(dados_rolados, dados_estoque, indice):
         if i != indice:
             nova_lista_estoque.append(dados_estoque[i])
     return [dados_rolados, nova_lista_estoque]
+
+def calcula_pontos_regra_simples(numeros_inteiros):
+    dicio = {}
+    for num in numeros_inteiros:
+        if num in dicio:
+            dicio[num] += num
+        else:
+            dicio[num] = num
+    return dicio
+            
