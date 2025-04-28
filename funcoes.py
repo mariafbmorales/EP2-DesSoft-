@@ -91,7 +91,7 @@ def calcula_pontos_quadra(numeros):
         if valor == 4:
             quarteto += 1
     
-    if quarteto == 1:
+    if quarteto >= 1:
         soma = 0
         for i in range(len(numeros)):
             soma += numeros[i]
