@@ -62,9 +62,9 @@ def calcula_pontos_full_house(numeros):
             repeticoes[numeros[i]] += 1
         if numeros[i] not in repeticoes:
             repeticoes[numeros[i]] = 1
-    for n in repeticoes:
+    for numero, contagem in repeticoes.items():
         soma = 0
-        if repeticoes[n] == 3 or repeticoes[n] == 2:
-            soma += n
+        if contagem == 3 or contagem == 2:
+            soma += numero * contagem 
         return soma
     return 0
