@@ -76,3 +76,6 @@ for i in range (12):
                             n = int(escolha)
                             if cartela_de_pontuação['regra_simples'][n] == -1:
                                 cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
+                                validacao = False
+                            else:
+                                print("Essa combinação já foi utilizada.")
