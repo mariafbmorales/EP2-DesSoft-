@@ -49,7 +49,7 @@ for i in range (12):
                 dados_guardados = lista_removidos[1]
 
             elif escolha_jogador == "3":
-                if roladas > 3:
+                if roladas >=2 :
                     print("Você já usou todas as rerrolagens.")
                 else:
                     rolados = len(dados_rolados)
