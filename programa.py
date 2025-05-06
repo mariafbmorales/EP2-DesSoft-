@@ -47,3 +47,13 @@ for i in range (12):
                 lista_removidos = remover_dado(dados_rolados, dados_guardados, removido)
                 dados_rolados = lista_removidos[0]
                 dados_guardados = lista_removidos[1]
+            elif escolha_jogador == '3':
+                if roladas > 3:
+                    print("Você já usou todas as rerrolagens.")
+                else:
+                    rolados = len(dados_rolados)
+                    dados_rolados = rolar_dados(rolados)
+                    roladas += 1
+            elif escolha_jogador == '4':
+                imprime_cartela(cartela_de_pontuação)
+        
