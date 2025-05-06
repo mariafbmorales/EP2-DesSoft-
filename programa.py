@@ -18,4 +18,15 @@ reg_simp = ["1", "2", "3", "4", "5", "6"]
 reg_av = ["sem_combinacao","quadra","full_house","sequencia_baixa","sequencia_alta","cinco_iguais"]
 
 for i in range (12):
-    
+    roladas = 0
+    dados_rolados = rolar_dados(5)
+    dados_guardados = []
+
+    continua = True
+    while continua:
+        print(f"Dados rolados:{dados_rolados}")
+        print(f"Dados guardados:{dados_guardados}")
+
+        print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
+        escolha_jogador = input()
+        while escolha_jogador not in ["0", "1", "2", "3", "4"]:
