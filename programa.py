@@ -79,3 +79,10 @@ for i in range (12):
                                 validacao = False
                             else:
                                 print("Essa combinação já foi utilizada.")
+
+                        if escolha in reg_av:
+                            if cartela_de_pontuação['regra_avancada'][escolha] == -1:
+                                cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
+                                validacao = False
+                            else:
+                                print("Essa combinação já foi utilizada.")
