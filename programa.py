@@ -60,4 +60,9 @@ for i in range (12):
                 imprime_cartela(cartela_de_pontuação)
             
             elif escolha_jogador == "0":
-                
+                total = dados_rolados + dados_guardados
+                validacao = True
+                print ("Digite a combinação desejada:")
+                validacao = input()
+                while validacao == 'True':
+                    while validacao not in 
