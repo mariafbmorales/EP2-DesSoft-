@@ -63,8 +63,16 @@ for i in range (12):
                 total = dados_rolados + dados_guardados
                 validacao = True
                 print ("Digite a combinação desejada:")
+
                 while validacao == 'True':
-                    validacao = input()
-                    while validacao not in reg_simp or validacao not in reg_av:
+                    escolha = input()
+
+                    while escolha not in reg_simp or escolha not in reg_av:
                         print("Opção inválida. Tente novamente.")
-                        validacao = input()
+                        escolha = input()
+
+                    else:
+                        if escolha in reg_simp:
+                            n = int(escolha)
+                            if cartela_de_pontuação['regra_simples'][n] == -1:
+                                cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
