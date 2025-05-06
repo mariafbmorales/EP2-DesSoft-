@@ -26,7 +26,8 @@ for i in range (12):
     while continua:
         print(f"Dados rolados:{dados_rolados}")
         print(f"Dados guardados:{dados_guardados}")
-
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
         escolha_jogador = input()
+
         while escolha_jogador not in ["0", "1", "2", "3", "4"]:
+            
