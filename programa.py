@@ -30,4 +30,13 @@ for i in range (12):
         escolha_jogador = input()
 
         while escolha_jogador not in ["0", "1", "2", "3", "4"]:
-            
+            print("Opção inválida. Tente novamente.")
+            escolha_jogador = input()
+        
+        else:
+            if escolha_jogador == "1":
+                print("Digite o índice do dado a ser guardado (0 a 4):")
+                guardado = int(input())
+                lista_guardados = guardar_dado(dados_rolados, dados_guardados, guardado)
+                dados_rolados = lista_guardados[0]
+                dados_guardados = lista_guardados[1]
