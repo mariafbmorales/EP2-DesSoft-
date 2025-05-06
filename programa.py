@@ -86,3 +86,14 @@ for i in range (12):
                                 validacao = False
                             else:
                                 print("Essa combinação já foi utilizada.")
+    
+    total_pontos = 0
+    for n in cartela_de_pontuação['regra_simples']:
+        total_pontos += cartela_de_pontuação['regra_simples'][n]
+        if total_pontos > 62:
+            total_pontos += 35
+    
+    for n in cartela_de_pontuação['regra_avancada']:
+        total_pontos += cartela_de_pontuação['regra_simples'][n]
+
+    print(f"Pontuação total: {total_pontos}")
