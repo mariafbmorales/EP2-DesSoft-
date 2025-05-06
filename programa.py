@@ -63,6 +63,8 @@ for i in range (12):
                 total = dados_rolados + dados_guardados
                 validacao = True
                 print ("Digite a combinação desejada:")
-                validacao = input()
                 while validacao == 'True':
-                    while validacao not in 
+                    validacao = input()
+                    while validacao not in reg_simp or validacao not in reg_av:
+                        print("Opção inválida. Tente novamente.")
+                        validacao = input()
