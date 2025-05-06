@@ -40,3 +40,10 @@ for i in range (12):
                 lista_guardados = guardar_dado(dados_rolados, dados_guardados, guardado)
                 dados_rolados = lista_guardados[0]
                 dados_guardados = lista_guardados[1]
+
+            elif escolha_jogador == "2":
+                print("Digite o índice do dado a ser removido (0 a 4):")
+                removido = int(input())
+                lista_removidos = remover_dado(dados_rolados, dados_guardados, removido)
+                dados_rolados = lista_removidos[0]
+                dados_guardados = lista_removidos[1]
