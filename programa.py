@@ -60,31 +60,32 @@ for i in range (12):
             
             elif escolha_jogador == "0":
                 total = dados_rolados + dados_guardados
-                validacao = True
+                validacao = False
                 print ("Digite a combinação desejada:")
 
-                while validacao == 'True':
+                while not validacao:
                     escolha = input()
 
-                    while escolha not in reg_simp or escolha not in reg_av:
-                        print("Opção inválida. Tente novamente.")
-                        escolha = input()
+                    if escolha in reg_simp:
+                        n = int(escolha)
+                        if cartela_de_pontuação['regra_simples'][n] == -1:
+                            cartela_de_pontuação = faz_jogada(total, n, cartela_de_pontuação)
+                            validacao = True
+                        else:
+                            print("Essa combinação já foi utilizada.")
 
+                    elif escolha in reg_av:
+                        if cartela_de_pontuação['regra_avancada'][escolha] == -1:
+                            cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
+                            validacao = True
+                        else:
+                            print("Essa combinação já foi utilizada.")
                     else:
-                        if escolha in reg_simp:
-                            n = int(escolha)
-                            if cartela_de_pontuação['regra_simples'][n] == -1:
-                                cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
-                                validacao = False
-                            else:
-                                print("Essa combinação já foi utilizada.")
+                        print("Opção inválida. Tente novamente.")
 
-                        if escolha in reg_av:
-                            if cartela_de_pontuação['regra_avancada'][escolha] == -1:
-                                cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
-                                validacao = False
-                            else:
-                                print("Essa combinação já foi utilizada.")
+                continua = False
+    
+    imprime_cartela(cartela_de_pontuação)
     
     total_pontos = 0
     for n in cartela_de_pontuação['regra_simples']:
