@@ -93,7 +93,7 @@ for i in range (12):
         if total_pontos > 62:
             total_pontos += 35
     
-    for escolha in cartela_de_pontuação['regra_avancada']:
-        total_pontos += cartela_de_pontuação['regra_avancada'][escolha]
+    for n in cartela_de_pontuação['regra_avancada']:
+        total_pontos += cartela_de_pontuação['regra_avancada'][n]
 
     print(f"Pontuação total: {total_pontos}")
