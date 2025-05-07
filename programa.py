@@ -68,7 +68,7 @@ for i in range (12):
                     if escolha in reg_simp:
                         n = int(escolha)
                         if cartela_de_pontuação['regra_simples'][n] == -1:
-                            cartela_de_pontuação = faz_jogada(total, n, cartela_de_pontuação)
+                            cartela_de_pontuação = faz_jogada(total, escolha, cartela_de_pontuação)
                             validacao = True
                         else:
                             print("Essa combinação já foi utilizada.")
@@ -86,16 +86,16 @@ for i in range (12):
 
 
 total_primeiro = 0
-for p in cartela_de_pontuação['regra_simples'].values():
-    total_primeiro += p
+for pont in cartela_de_pontuação['regra_simples'].values():
+    total_primeiro += pont
 
 bonus = 0
 if total_primeiro >= 63:
     bonus += 35
 
 total_segundo = 0
-for p in cartela_de_pontuação['regra_avancada'].values():
-    total_segundo += p
+for pont in cartela_de_pontuação['regra_avancada'].values():
+    total_segundo += pont
 
 total_pontos = total_primeiro + total_segundo + bonus
 
