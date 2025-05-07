@@ -90,14 +90,18 @@ imprime_cartela(cartela_de_pontuação)
 n = int(escolha)
 total_primeiro = 0
 for n in cartela_de_pontuação['regra_simples']:
-    total_primeiro += cartela_de_pontuação['regra_simples'][n]
+    valor = cartela_de_pontuação['regra_simples'][n]
+    if valor != -1:
+        total_primeiro += cartela_de_pontuação['regra_simples'][n]
 bonus = 0
 if total_primeiro > 62:
     bonus += 35
 
 total_segundo = 0
 for escolha in cartela_de_pontuação['regra_avancada']:
-    total_segundo += cartela_de_pontuação['regra_avancada'][escolha]
+    valor = cartela_de_pontuação['regra_avancada'][escolha]
+    if valor != -1:
+        total_segundo += cartela_de_pontuação['regra_simples'][n]
 
 total_pontos = total_primeiro+total_segundo+bonus
 
