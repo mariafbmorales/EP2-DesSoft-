@@ -17,11 +17,10 @@ imprime_cartela(cartela_de_pontuação)
 reg_simp = ["1", "2", "3", "4", "5", "6"]
 reg_av = ["sem_combinacao","quadra","full_house","sequencia_baixa","sequencia_alta","cinco_iguais"]
 
-dados_rolados = rolar_dados(5)
-dados_guardados = []
-roladas = 0
-
 for i in range (12):
+    dados_rolados = rolar_dados(5)
+    dados_guardados = []
+    roladas = 0
     continua = True
     while continua:
         print(f"Dados rolados:{dados_rolados}")
