@@ -18,9 +18,9 @@ reg_simp = ["1", "2", "3", "4", "5", "6"]
 reg_av = ["sem_combinacao","quadra","full_house","sequencia_baixa","sequencia_alta","cinco_iguais"]
 
 for i in range (12):
-    roladas = 0
     dados_rolados = rolar_dados(5)
     dados_guardados = []
+    roladas = 0
 
     continua = True
     while continua:
@@ -52,8 +52,7 @@ for i in range (12):
                 if roladas >=2 :
                     print("Você já usou todas as rerrolagens.")
                 else:
-                    rolados = len(dados_rolados)
-                    dados_rolados = rolar_dados(rolados)
+                    dados_rolados = rolar_dados(len(dados_rolados))
                     roladas += 1
 
             elif escolha_jogador == "4":
