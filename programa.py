@@ -17,11 +17,11 @@ imprime_cartela(cartela_de_pontuação)
 reg_simp = ["1", "2", "3", "4", "5", "6"]
 reg_av = ["sem_combinacao","quadra","full_house","sequencia_baixa","sequencia_alta","cinco_iguais"]
 
-for i in range (12):
-    dados_rolados = rolar_dados(5)
-    dados_guardados = []
-    roladas = 0
+dados_rolados = rolar_dados(5)
+dados_guardados = []
+roladas = 0
 
+for i in range (12):
     continua = True
     while continua:
         print(f"Dados rolados:{dados_rolados}")
@@ -84,22 +84,19 @@ for i in range (12):
                         print("Opção inválida. Tente novamente.")
 
                 continua = False
-    
-n = int(escolha)
+
+
 total_primeiro = 0
-for n in cartela_de_pontuação['regra_simples']:
-    valor = cartela_de_pontuação['regra_simples'][n]
-    if valor != -1:
-        total_primeiro += valor
+for p in cartela_de_pontuação['regra_simples'].values():
+    total_primeiro += p
+
 bonus = 0
 if total_primeiro >= 63:
     bonus += 35
 
 total_segundo = 0
-for escolha in cartela_de_pontuação['regra_avancada']:
-    valor = cartela_de_pontuação['regra_avancada'][escolha]
-    if valor != -1:
-        total_segundo += valor
+for p in cartela_de_pontuação['regra_avancada'].values():
+    total_segundo += p
 
 total_pontos = total_primeiro + total_segundo + bonus
 
