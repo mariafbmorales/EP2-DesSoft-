@@ -87,6 +87,7 @@ for i in range (12):
     
 imprime_cartela(cartela_de_pontuação)
 
+n = int(escolha)
 total_primeiro = 0
 for n in cartela_de_pontuação['regra_simples']:
     total_primeiro += cartela_de_pontuação['regra_simples'][n]
